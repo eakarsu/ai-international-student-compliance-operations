@@ -1,0 +1,64 @@
+[
+  {
+    "id": "domain-calculation",
+    "title": "Student event reporting queue",
+    "operation": "deadlines",
+    "example": {
+      "asOf": "2026-10-20T12:00:00Z",
+      "items": [
+        {
+          "id": "enrollment-event",
+          "dueAt": "2026-10-18T12:00:00Z",
+          "completed": false
+        },
+        {
+          "id": "document-review",
+          "dueAt": "2026-10-23T12:00:00Z",
+          "completed": false
+        }
+      ]
+    },
+    "description": "Compute overdue intervals from DSO-entered deadlines; legal reporting periods are not inferred."
+  },
+  {
+    "id": "evidence-check",
+    "operation": "evidence",
+    "title": "Student Case evidence checklist",
+    "description": "Check source presence against an explicitly supplied document list; reviewer assesses adequacy.",
+    "example": {
+      "requirements": [
+        {
+          "id": "source-1",
+          "requirement": "Student Document evidence",
+          "evidence": "Example source reference"
+        },
+        {
+          "id": "source-2",
+          "requirement": "Reviewed rule version",
+          "evidence": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "deadline-check",
+    "operation": "deadlines",
+    "title": "Operational deadline queue",
+    "description": "Compute overdue items from entered dates and completed flags; no external notifications.",
+    "example": {
+      "asOf": "2026-10-20T12:00:00Z",
+      "items": [
+        {
+          "id": "review-1",
+          "dueAt": "2026-10-18T00:00:00Z",
+          "completed": false
+        },
+        {
+          "id": "follow-up-1",
+          "dueAt": "2026-10-23T00:00:00Z",
+          "completed": false
+        }
+      ]
+    }
+  }
+]

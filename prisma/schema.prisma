@@ -1,0 +1,356 @@
+// Generated schema — modeled after beautyhqio conventions.
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  active       Boolean @default(true)
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  role         Role     @default(ANALYST)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+enum Role {
+  ADMIN
+  MANAGER
+  ANALYST
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  actorId   String?
+  actorName String?
+  action    String
+  entity    String
+  entityId  String?
+  detail    String?
+  createdAt DateTime @default(now())
+}
+
+model WorkflowAnalysis {
+ id String @id @default(cuid())
+ actorId String
+ workflow String
+ subjectEntity String
+ subjectId String
+ input Json
+ evidence Json
+ evidenceHash String
+ result Json
+ model String
+ receipt String?
+ createdAt DateTime @default(now())
+ @@index([workflow, createdAt])
+}
+model RecordReview {
+ id String @id @default(cuid())
+ actorId String
+ entity String
+ entityId String
+ version String
+ reason String
+ createdAt DateTime @default(now())
+ @@unique([entity, entityId, version, actorId])
+}
+model UsageBucket {
+ id String @id
+ calls Int
+}
+model IssuedCredential {
+ token String @id
+ entity String
+ entityId String
+ version String
+ assertion Json
+ createdAt DateTime @default(now())
+ revokedAt DateTime?
+ @@index([entity, entityId, createdAt])
+}
+
+model DomainArtifact {
+ id String @id @default(cuid())
+ subjectEntity String
+ subjectId String
+ title String
+ content String
+ contentHash String
+ actorId String
+ approvedBy String?
+ createdAt DateTime @default(now())
+ @@index([subjectEntity, subjectId])
+}
+
+model RecordApproval {
+ id String @id
+ version String
+}
+model DomainExecution {
+ id String @id
+ actorId String
+ connectorId String
+ action String
+ subjectEntity String
+ subjectId String
+ version String
+ status String
+ result Json?
+ createdAt DateTime @default(now())
+}
+
+model WorkSession {
+ id String @id @default(cuid())
+ actorId String
+ respondentId String
+ subjectEntity String
+ subjectId String
+ questions Json
+ answers Json
+ currentQuestion String?
+ status String
+ deadline DateTime
+ createdAt DateTime @default(now())
+ @@index([respondentId, createdAt])
+}
+model SessionMedia {
+ id String @id @default(cuid())
+ sessionId String
+ questionId String
+ actorId String
+ contentType String
+ bytes Bytes
+ contentHash String
+ createdAt DateTime @default(now())
+ @@index([sessionId])
+}
+
+model AppSetting {
+ id String @id
+ value Json
+ updatedAt DateTime @updatedAt
+}
+
+model StudentCase {
+ id String @id @default(cuid())
+ name String
+ studentReference String
+ school String
+ program String
+ startAt DateTime
+ expectedEndAt DateTime
+ status String @default("Draft")
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ inverseStudentDocument_studentCaseId StudentDocument[] @relation("StudentDocument_studentCaseId")
+ inverseEnrollmentEvent_studentCaseId EnrollmentEvent[] @relation("EnrollmentEvent_studentCaseId")
+ inverseEmploymentRequest_studentCaseId EmploymentRequest[] @relation("EmploymentRequest_studentCaseId")
+ inverseStudentRequest_studentCaseId StudentRequest[] @relation("StudentRequest_studentCaseId")
+ inverseDsoReview_studentCaseId DsoReview[] @relation("DsoReview_studentCaseId")
+ inverseReportingEvent_studentCaseId ReportingEvent[] @relation("ReportingEvent_studentCaseId")
+ inverseReportingReceipt_studentCaseId ReportingReceipt[] @relation("ReportingReceipt_studentCaseId")
+ inverseStudentCommunication_studentCaseId StudentCommunication[] @relation("StudentCommunication_studentCaseId")
+ inverseOperationalTask_studentCaseId OperationalTask[] @relation("OperationalTask_studentCaseId")
+ inverseRuleVersion_studentCaseId RuleVersion[] @relation("RuleVersion_studentCaseId")
+ inverseDocumentRequirement_studentCaseId DocumentRequirement[] @relation("DocumentRequirement_studentCaseId")
+}
+
+model StudentDocument {
+ id String @id @default(cuid())
+ title String
+ documentType String
+ documentNumber String
+ issuedAt DateTime
+ expiresAt DateTime
+ sourceReference String
+ status String @default("Draft")
+ studentCaseId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([studentCaseId])
+ linkedStudentCaseId StudentCase @relation("StudentDocument_studentCaseId", fields: [studentCaseId], references: [id], onDelete: Restrict)
+}
+
+model EnrollmentEvent {
+ id String @id @default(cuid())
+ title String
+ term String
+ eventType String
+ effectiveAt DateTime
+ credits Float
+ evidence String
+ status String @default("Draft")
+ studentCaseId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([studentCaseId])
+ linkedStudentCaseId StudentCase @relation("EnrollmentEvent_studentCaseId", fields: [studentCaseId], references: [id], onDelete: Restrict)
+}
+
+model EmploymentRequest {
+ id String @id @default(cuid())
+ title String
+ employer String
+ employmentType String
+ startAt DateTime
+ endAt DateTime
+ hoursPerWeek Float
+ evidence String
+ status String @default("Draft")
+ studentCaseId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([studentCaseId])
+ linkedStudentCaseId StudentCase @relation("EmploymentRequest_studentCaseId", fields: [studentCaseId], references: [id], onDelete: Restrict)
+}
+
+model StudentRequest {
+ id String @id @default(cuid())
+ title String
+ requestType String
+ submittedAt DateTime
+ requestedAt DateTime
+ details String
+ responseDueAt DateTime
+ status String @default("Draft")
+ studentCaseId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([studentCaseId])
+ linkedStudentCaseId StudentCase @relation("StudentRequest_studentCaseId", fields: [studentCaseId], references: [id], onDelete: Restrict)
+}
+
+model DsoReview {
+ id String @id @default(cuid())
+ title String
+ reviewer String
+ reviewedAt DateTime
+ requestReference String
+ decision String
+ rationale String
+ status String @default("Draft")
+ studentCaseId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([studentCaseId])
+ linkedStudentCaseId StudentCase @relation("DsoReview_studentCaseId", fields: [studentCaseId], references: [id], onDelete: Restrict)
+}
+
+model ReportingEvent {
+ id String @id @default(cuid())
+ title String
+ eventType String
+ effectiveAt DateTime
+ reportingDueAt DateTime
+ payloadReference String
+ authorizationReference String?
+ status String @default("Draft")
+ studentCaseId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([studentCaseId])
+ linkedStudentCaseId StudentCase @relation("ReportingEvent_studentCaseId", fields: [studentCaseId], references: [id], onDelete: Restrict)
+ inverseReportingReceipt_reportingEventId ReportingReceipt[] @relation("ReportingReceipt_reportingEventId")
+}
+
+model ReportingReceipt {
+ id String @id @default(cuid())
+ title String
+ reportingEventId String
+ submittedAt DateTime
+ submitter String
+ externalReceipt String
+ responseText String
+ status String @default("Draft")
+ studentCaseId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([studentCaseId])
+ linkedReportingEventId ReportingEvent @relation("ReportingReceipt_reportingEventId", fields: [reportingEventId], references: [id], onDelete: Restrict)
+ linkedStudentCaseId StudentCase @relation("ReportingReceipt_studentCaseId", fields: [studentCaseId], references: [id], onDelete: Restrict)
+}
+
+model StudentCommunication {
+ id String @id @default(cuid())
+ title String
+ contactedAt DateTime
+ channel String
+ topic String
+ message String
+ followUpAt DateTime?
+ status String @default("Draft")
+ studentCaseId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([studentCaseId])
+ linkedStudentCaseId StudentCase @relation("StudentCommunication_studentCaseId", fields: [studentCaseId], references: [id], onDelete: Restrict)
+}
+
+model OperationalTask {
+ id String @id @default(cuid())
+ title String
+ owner String
+ priority String
+ startAt DateTime
+ dueAt DateTime
+ done Boolean
+ notes String?
+ status String @default("Draft")
+ studentCaseId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([studentCaseId])
+ linkedStudentCaseId StudentCase @relation("OperationalTask_studentCaseId", fields: [studentCaseId], references: [id], onDelete: Restrict)
+}
+
+model RuleVersion {
+ id String @id @default(cuid())
+ title String
+ jurisdiction String
+ version String
+ effectiveAt DateTime
+ expiresAt DateTime?
+ sourceUrl String
+ requirementText String
+ status String @default("Draft")
+ studentCaseId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([studentCaseId])
+ linkedStudentCaseId StudentCase @relation("RuleVersion_studentCaseId", fields: [studentCaseId], references: [id], onDelete: Restrict)
+}
+
+model DocumentRequirement {
+ id String @id @default(cuid())
+ title String
+ category String
+ requiredBy DateTime
+ sourceReference String
+ evidenceReference String?
+ reviewNotes String?
+ status String @default("Draft")
+ studentCaseId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([studentCaseId])
+ linkedStudentCaseId StudentCase @relation("DocumentRequirement_studentCaseId", fields: [studentCaseId], references: [id], onDelete: Restrict)
+}

@@ -1,0 +1,354 @@
+{
+  "document-date-extraction": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare document date extraction for fictional example 23-1.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to document date extraction. Attach real approved sources separately."
+      },
+      "id": "document-date-extraction-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare document date extraction for fictional example 23-2.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to document date extraction. Attach real approved sources separately."
+      },
+      "id": "document-date-extraction-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare document date extraction for fictional example 23-3.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to document date extraction. Attach real approved sources separately."
+      },
+      "id": "document-date-extraction-3"
+    }
+  ],
+  "enrollment-event-reconciliation": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare enrollment event reconciliation for fictional example 23-1.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to enrollment event reconciliation. Attach real approved sources separately."
+      },
+      "id": "enrollment-event-reconciliation-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare enrollment event reconciliation for fictional example 23-2.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to enrollment event reconciliation. Attach real approved sources separately."
+      },
+      "id": "enrollment-event-reconciliation-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare enrollment event reconciliation for fictional example 23-3.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to enrollment event reconciliation. Attach real approved sources separately."
+      },
+      "id": "enrollment-event-reconciliation-3"
+    }
+  ],
+  "employment-evidence-gaps": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare employment evidence gaps for fictional example 23-1.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to employment evidence gaps. Attach real approved sources separately."
+      },
+      "id": "employment-evidence-gaps-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare employment evidence gaps for fictional example 23-2.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to employment evidence gaps. Attach real approved sources separately."
+      },
+      "id": "employment-evidence-gaps-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare employment evidence gaps for fictional example 23-3.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to employment evidence gaps. Attach real approved sources separately."
+      },
+      "id": "employment-evidence-gaps-3"
+    }
+  ],
+  "student-request-response-draft": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare student request response draft for fictional example 23-1.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to student request response draft. Attach real approved sources separately."
+      },
+      "id": "student-request-response-draft-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare student request response draft for fictional example 23-2.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to student request response draft. Attach real approved sources separately."
+      },
+      "id": "student-request-response-draft-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare student request response draft for fictional example 23-3.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to student request response draft. Attach real approved sources separately."
+      },
+      "id": "student-request-response-draft-3"
+    }
+  ],
+  "dso-review-brief": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare dso review brief for fictional example 23-1.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to dso review brief. Attach real approved sources separately."
+      },
+      "id": "dso-review-brief-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare dso review brief for fictional example 23-2.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to dso review brief. Attach real approved sources separately."
+      },
+      "id": "dso-review-brief-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare dso review brief for fictional example 23-3.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to dso review brief. Attach real approved sources separately."
+      },
+      "id": "dso-review-brief-3"
+    }
+  ],
+  "reporting-queue-summary": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare reporting queue summary for fictional example 23-1.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to reporting queue summary. Attach real approved sources separately."
+      },
+      "id": "reporting-queue-summary-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare reporting queue summary for fictional example 23-2.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to reporting queue summary. Attach real approved sources separately."
+      },
+      "id": "reporting-queue-summary-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare reporting queue summary for fictional example 23-3.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to reporting queue summary. Attach real approved sources separately."
+      },
+      "id": "reporting-queue-summary-3"
+    }
+  ],
+  "evidence-completeness-review": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare evidence completeness review for fictional example 23-1.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to evidence completeness review. Attach real approved sources separately."
+      },
+      "id": "evidence-completeness-review-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare evidence completeness review for fictional example 23-2.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to evidence completeness review. Attach real approved sources separately."
+      },
+      "id": "evidence-completeness-review-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare evidence completeness review for fictional example 23-3.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to evidence completeness review. Attach real approved sources separately."
+      },
+      "id": "evidence-completeness-review-3"
+    }
+  ],
+  "operations-handoff-draft": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare operations handoff draft for fictional example 23-1.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to operations handoff draft. Attach real approved sources separately."
+      },
+      "id": "operations-handoff-draft-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare operations handoff draft for fictional example 23-2.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to operations handoff draft. Attach real approved sources separately."
+      },
+      "id": "operations-handoff-draft-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare operations handoff draft for fictional example 23-3.",
+        "sourceContext": "Fictional training scenario for University international-student offices. Coordinate enrollment events, document expirations, employment evidence, student requests and authorized SEVIS reporting queues. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to operations handoff draft. Attach real approved sources separately."
+      },
+      "id": "operations-handoff-draft-3"
+    }
+  ]
+}

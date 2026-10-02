@@ -1,0 +1,610 @@
+{
+  "StudentCase": {
+    "name": "StudentCase",
+    "fields": [
+      {
+        "name": "name",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "studentReference",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "school",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "program",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "startAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "expectedEndAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      }
+    ]
+  },
+  "StudentDocument": {
+    "name": "StudentDocument",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "documentType",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "documentNumber",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "issuedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "expiresAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "sourceReference",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "studentCaseId",
+        "kind": "string",
+        "required": true,
+        "relation": "StudentCase"
+      }
+    ],
+    "parent": {
+      "entity": "StudentCase",
+      "field": "studentCaseId"
+    }
+  },
+  "EnrollmentEvent": {
+    "name": "EnrollmentEvent",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "term",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "eventType",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "effectiveAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "credits",
+        "kind": "number",
+        "required": true,
+        "min": 0
+      },
+      {
+        "name": "evidence",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "studentCaseId",
+        "kind": "string",
+        "required": true,
+        "relation": "StudentCase"
+      }
+    ],
+    "parent": {
+      "entity": "StudentCase",
+      "field": "studentCaseId"
+    }
+  },
+  "EmploymentRequest": {
+    "name": "EmploymentRequest",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "employer",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "employmentType",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "startAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "endAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "hoursPerWeek",
+        "kind": "number",
+        "required": true,
+        "min": 0
+      },
+      {
+        "name": "evidence",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "studentCaseId",
+        "kind": "string",
+        "required": true,
+        "relation": "StudentCase"
+      }
+    ],
+    "parent": {
+      "entity": "StudentCase",
+      "field": "studentCaseId"
+    }
+  },
+  "StudentRequest": {
+    "name": "StudentRequest",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "requestType",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "submittedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "requestedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "details",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "responseDueAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "studentCaseId",
+        "kind": "string",
+        "required": true,
+        "relation": "StudentCase"
+      }
+    ],
+    "parent": {
+      "entity": "StudentCase",
+      "field": "studentCaseId"
+    }
+  },
+  "DsoReview": {
+    "name": "DsoReview",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "reviewer",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "reviewedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "requestReference",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "decision",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "rationale",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "studentCaseId",
+        "kind": "string",
+        "required": true,
+        "relation": "StudentCase"
+      }
+    ],
+    "parent": {
+      "entity": "StudentCase",
+      "field": "studentCaseId"
+    }
+  },
+  "ReportingEvent": {
+    "name": "ReportingEvent",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "eventType",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "effectiveAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "reportingDueAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "payloadReference",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "authorizationReference",
+        "kind": "string",
+        "required": false
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "studentCaseId",
+        "kind": "string",
+        "required": true,
+        "relation": "StudentCase"
+      }
+    ],
+    "parent": {
+      "entity": "StudentCase",
+      "field": "studentCaseId"
+    }
+  },
+  "ReportingReceipt": {
+    "name": "ReportingReceipt",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "reportingEventId",
+        "kind": "string",
+        "required": true,
+        "relation": "ReportingEvent"
+      },
+      {
+        "name": "submittedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "submitter",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "externalReceipt",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "responseText",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "studentCaseId",
+        "kind": "string",
+        "required": true,
+        "relation": "StudentCase"
+      }
+    ],
+    "parent": {
+      "entity": "StudentCase",
+      "field": "studentCaseId"
+    }
+  },
+  "StudentCommunication": {
+    "name": "StudentCommunication",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "contactedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "channel",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "topic",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "message",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "followUpAt",
+        "kind": "date",
+        "required": false
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "studentCaseId",
+        "kind": "string",
+        "required": true,
+        "relation": "StudentCase"
+      }
+    ],
+    "parent": {
+      "entity": "StudentCase",
+      "field": "studentCaseId"
+    }
+  },
+  "OperationalTask": {
+    "name": "OperationalTask",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "owner",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "priority",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "startAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "dueAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "done",
+        "kind": "boolean",
+        "required": true
+      },
+      {
+        "name": "notes",
+        "kind": "string",
+        "required": false
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "studentCaseId",
+        "kind": "string",
+        "required": true,
+        "relation": "StudentCase"
+      }
+    ],
+    "parent": {
+      "entity": "StudentCase",
+      "field": "studentCaseId"
+    }
+  },
+  "RuleVersion": {
+    "name": "RuleVersion",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "jurisdiction",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "version",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "effectiveAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "expiresAt",
+        "kind": "date",
+        "required": false
+      },
+      {
+        "name": "sourceUrl",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "requirementText",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "studentCaseId",
+        "kind": "string",
+        "required": true,
+        "relation": "StudentCase"
+      }
+    ],
+    "parent": {
+      "entity": "StudentCase",
+      "field": "studentCaseId"
+    }
+  },
+  "DocumentRequirement": {
+    "name": "DocumentRequirement",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "category",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "requiredBy",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "sourceReference",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "evidenceReference",
+        "kind": "string",
+        "required": false
+      },
+      {
+        "name": "reviewNotes",
+        "kind": "string",
+        "required": false
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "studentCaseId",
+        "kind": "string",
+        "required": true,
+        "relation": "StudentCase"
+      }
+    ],
+    "parent": {
+      "entity": "StudentCase",
+      "field": "studentCaseId"
+    }
+  }
+}
